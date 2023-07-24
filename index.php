@@ -38,7 +38,12 @@ function processAndSaveData($conn, $data) {
     }
   }
 
-  $age = (int) substr($data, $temp,strlen($data) - $temp +2);
+  // echo strlen($data) - $temp +1;
+  // echo $temp;
+
+  $age = (int) substr($data, $temp-1, 2);
+  echo $age;
+
 
 
   $name =  strtoupper(substr($data, 0, $temp-1));
